@@ -1,6 +1,6 @@
 ---
 layout: post
-title: First post!
+title: Why I built this.
 ---
 
-This is my first post, how exciting!
+To better predict your marathon pace.

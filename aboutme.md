@@ -1,16 +1,9 @@
 ---
 layout: page
-title: About me
-subtitle: Why you'd want to go on a date with me
+title: About
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+This project is the work of [@JohnStantonGeddes](https://github.com/johnstantongeddes). I'm a dad, [runner](http://www.athlinks.com/athletes/181054618), [biologist](http://johnstantongeddes.org/) and [statistician](https://careers.stackoverflow.com/johnstantongeddes).
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+I'm excited to use data and statistics to make the world a better, or at least faster, place.
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](http://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
