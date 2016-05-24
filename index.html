@@ -1,37 +1,35 @@
 ---
 layout: page
 title: Phidippides
-subtitle: Marathon Performance Predictor
+subtitle: A Data-Informed Marathoner's Toolbox
 ---
 
 <div class="main-explain-area jumbotron">
-  <p>You've done the training. You have the right gear. You've planned your nutrition. Now, figure out your goal time should be.</p>
+  <p>The goal of the Phidippides Project is to develop a data-informed runner's toolbox. What should your marathon pace be? How many miles a week should you run to achieve your goal? How should weather influence your race goals? This is a work in progress, and I'll post updates here as they come.</p>
 </div>
-
-<iframe width="750" height="700" src="https://johnsg.shinyapps.io/phidippides" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 <div class="posts-list">
   {% for post in paginator.posts %}
   <article class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
 	  <h2 class="post-title">{{ post.title }}</h2>
-	
+
 	  {% if post.subtitle %}
 	  <h3 class="post-subtitle">
 	    {{ post.subtitle }}
 	  </h3>
-	  {% endif %}  
+	  {% endif %}
     </a>
 
     <p class="post-meta">
       Posted on {{ post.date | date: "%B %-d, %Y" }}
     </p>
-  
+
     <div class="post-entry">
-      {{ post.content | truncatewords: 50 | strip_html}}
+      {{ post.content | truncatewords: 50 | strip_html | xml_escape}}
 	  <a href="{{ post.url | prepend: site.baseurl }}" class="post-read-more">[Read&nbsp;More]</a>
     </div>
-  
+
    </article>
   {% endfor %}
 </div>

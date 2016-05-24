@@ -1,9 +1,9 @@
-# --- Serving options --- #
+# --- General options --- #
 
 # url is the full website URL
 # baseurl is the website's URL without the hostname
 
-# If you are building a simple GitHub user page (username.github.io) then use these settings:
+# If you are building a simple GitHub user page (http://username.github.io) then use these settings:
 url: "http://phidippides.github.io"
 baseurl: ""
 
@@ -17,20 +17,18 @@ baseurl: ""
 title: Phidippides
 
 # Short description of your site
-description: Web app for race performance prediction
+description: Marathoners Toolbox
 
 # --- Navigation bar options --- #
+
+# List of links in the navigation bar
+navbar-links:
+  About: "about"
 
 # Image to show in the navigation bar - image must be a square (width = height)
 # Remove this parameter if you don't want an image in the navbar
 avatar: "/img/avatar-icon.png"
 
-# List of links in the navigation bar
-navbar-links:
-  Home: ""
-  About: "about"
-  #Contact: "contact"
-  
 # --- Footer options --- #
 
 # Change all these values or delete the ones you don't want.
@@ -40,22 +38,22 @@ author:
   email: "john.stantongeddes.research@gmail.com"
   github: johnstantongeddes
   twitter: jsgdatsci
-  linkedin: pub/john-stanton-geddes/76/b49/20 # eg. "pub/dean-attali/8/946/143"
-  stackoverflow: users/2250580/johnsg  # eg. "users/3943160/daattali"
- 
+  linkedin: pub/john-stanton-geddes/76/b49/20  # eg. "pub/dean-attali/8/946/143"
+  #stackoverflow: yourlink  # eg. "3943160/daattali"
+
 # Select which links to show in the footer
 footer-links-active:
   rss: false
-  facebook: false
+  facebook: true
   email: true
   twitter: true
   github: true
-  linkedin: true
+  linkedin: false
   stackoverflow: false
 
 # How to display the link to the website in the footer
 # Remove this if you don't want a link in the footer
-#url-pretty: "MyWebsite.com"  # eg. "deanattali.com/beautiful-jekyll"
+url-pretty: "phidippides.github.io"  # eg. "deanattali.com/beautiful-jekyll"
 
 # --- Misc --- #
 
@@ -70,9 +68,12 @@ footer-links-active:
 # Output options (more information on Jekyll's site)
 timezone: "America/New_York"
 markdown: kramdown
-highlighter: pygments
-permalink: /:year-:month-:day-:title
+highlighter: rouge
+permalink: /:year-:month-:day-:title/
 paginate: 5
+
+kramdown:
+  input: GFM
 
 # Default YAML values (more information on Jekyll's site)
 defaults:
@@ -81,18 +82,23 @@ defaults:
       path: ""
       type: "posts"
     values:
+      layout: "post"
       comments: true  # add comments to all blog posts
   -
     scope:
       path: "" # all files
     values:
-      layout: "default"
+      layout: "page"
+      show-avatar: true
 
 # Exclude these files from production site
 exclude:
-  - CNAME
+  - Gemfile
+  - Gemfile.lock
   - LICENSE
   - README.md
+  - CNAME
+  - Vagrantfile
 
 # prose.io config
 prose:
@@ -138,6 +144,9 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
-  
+
+gems:
+  - jekyll-paginate
+
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
