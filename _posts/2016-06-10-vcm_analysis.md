@@ -20,7 +20,6 @@ This table shows that a 3 hour marathoner was ~5% slower in 2016 than if the rac
 
 I also noticed that the percent pace slowdown was less for faster runners, which makes sense as they spend less time out in the heat, and their generally higher marathon fitness may have allowed them to perform better given the conditions.
 
-
 |Time     |  Temp at 10am |  Percent Slower |
 |-------- | ------------- | --------------- |
 |2:30:00  |            50 |             3.4 |
